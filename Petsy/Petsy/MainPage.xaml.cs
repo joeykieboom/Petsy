@@ -25,6 +25,7 @@ namespace Petsy
         public MainPage()
         {
             this.InitializeComponent();
+            //Gittest
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
