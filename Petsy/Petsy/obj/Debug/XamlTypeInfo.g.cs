@@ -529,5 +529,8 @@ namespace Petsy.Petsy_XamlTypeInfo
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Created database with the table Petsy

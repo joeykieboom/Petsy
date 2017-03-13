@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\App.xbf
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\MainPage.xbf
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.xr.xml
@@ -30,3 +31,37 @@ C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\ProjectArchitectures.txt
+=======
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\App.xbf
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\MainPage.xbf
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.xr.xml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.exe
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.pdb
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\resources.pri
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\AppxManifest.xml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.build.appxrecipe
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\App.g.i.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\App.g.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\MainPage.g.i.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\MainPage.g.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\App.xaml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\MainPage.xaml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\App.xbf
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\MainPage.xbf
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\Petsy.exe
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\Petsy.pdb
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\priconfig.xml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\priconfig.xml.intermediate
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\layout.resfiles
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\layout.resfiles.intermediate
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\resources.resfiles
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\resources.resfiles.intermediate
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\pri.resfiles
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\pri.resfiles.intermediate
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\ProjectArchitectures.txt
+>>>>>>> Created database with the table Petsy

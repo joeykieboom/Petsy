@@ -8,7 +8,22 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <StackPanel>
+        <TextBox 
+            Name="main_page_pet_name"
+            HorizontalAlignment="Stretch" TextChanged="main_page_pet_name_TextChanged"/>
+        <Button Name="main_page_button_add" HorizontalAlignment="Stretch" Click="main_page_button_add_Click">Aanmaken</Button>
+        <Button Click="Button_Click">Check if exist</Button>
+        <TextBox Name="PetNameTextbox"></TextBox>
 
-    </Grid>
+    </StackPanel>
+
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add" Label="Add item" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+
 </Page>
