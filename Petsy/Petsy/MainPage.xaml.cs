@@ -25,11 +25,20 @@ namespace Petsy
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        ObservableCollection<Pets> pets = new ObservableCollection<Pets>();
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            pets = new DBHandler().getAllPets();
+
+            // Set the cells to the Page's DataContext. All controls on 
+            // the page will inherit this.
+            this.DataContext = pets;
         }
 
         /// <summary>
@@ -75,7 +84,7 @@ namespace Petsy
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             DBHandler db = new DBHandler();
-
+             
             if (main_page_pet_name.Text != "")
             {
                 db.addPet(new Pets(main_page_pet_name.Text, 12, "male", 200, ""));
