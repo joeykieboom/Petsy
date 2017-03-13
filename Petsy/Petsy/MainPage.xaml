@@ -19,6 +19,7 @@
     </StackPanel>
 
 
+    
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton Icon="Add" Label="Add item" Click="AppBarButton_Click"/>
