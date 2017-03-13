@@ -6,43 +6,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Red">
     
-    <Page.Resources>
-        <DataTemplate x:Key="DataTemplate1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Rectangle Height="75" Width="75" Grid.RowSpan="2" Fill="Red" Margin="5"/>
-                <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Bottom">
-                    <TextBlock x:Name="firstNameTB" TextWrapping="Wrap" Margin="15,0" Style="{StaticResource ListViewItemTextBlockStyle}" Text="{Binding p_Name}" FontSize="33.333"/>
-                    <TextBlock x:Name="lastNameTB" TextWrapping="Wrap" Text="{Binding p_Gender}" Style="{StaticResource ListViewItemTextBlockStyle}" FontSize="33.333"/>
-                </StackPanel>
-                <TextBlock x:Name="numberTB" TextWrapping="Wrap" Text="{Binding p_Age}" Grid.Row="1" Grid.Column="1" Style="{StaticResource ListViewItemSubheaderTextBlockStyle}" VerticalAlignment="Top" Margin="15,0,0,0" FontSize="20"/>
-            </Grid>
-        </DataTemplate>
-    </Page.Resources>
-
-    <StackPanel DataContext="{Binding Pets}">
-        <TextBox x:ConnectionId='1' 
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+            <TextBox x:ConnectionId='1' 
             Name="main_page_pet_name"
             HorizontalAlignment="Stretch"                                             />
         <Button x:ConnectionId='2' Name="main_page_button_add" HorizontalAlignment="Stretch"                                   >Aanmaken</Button>
         <Button x:ConnectionId='3'                     >Check if exist</Button>
         <TextBox Name="PetNameTextbox"></TextBox>
 
+           
+            <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0">
+                <ListView.Resources>
+                    <DataTemplate x:Key="petsDataViewModel">
+                        <StackPanel>
+                            <Image Source="/Assets/mensergerjeniet.png"/>
+                            <TextBlock x:Name="title" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding p_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                            <TextBlock x:Name="content" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding p_Age, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"  />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.Resources>
+                <ListView.ItemTemplate>
+                    <StaticResource ResourceKey="petsDataViewModel"/>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
 
-        <ListView VerticalAlignment="Stretch" x:Name="listView" ItemTemplate="{StaticResource DataTemplate1}" ItemsSource="{Binding DBHandler.petItems}" />
-
-    </StackPanel>
-
+        
+    </ScrollViewer>
 
     <Page.BottomAppBar>
         <CommandBar>
@@ -51,5 +44,6 @@
     </Page.BottomAppBar>
 
 
+    
 </Page>
 
