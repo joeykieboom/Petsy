@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Petsy.data.models;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,14 +31,34 @@ namespace Petsy
     {
         private TransitionCollection transitions;
 
-        /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
+        public static string DB_NAME = "PetsyDatabase.sqlite";
+        public static string DB_PATH = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, DB_NAME));
+
         public App()
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            if (!CheckFileExists(DB_NAME).Result)
+            {
+                using (var db = new SQLiteConnection(DB_PATH))
+                {
+                    db.CreateTable<Pets>();
+                }
+            }
+        }
+
+        private async Task<bool> CheckFileExists(string fileName)
+        {
+            try
+            {
+                var storage = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+                return true;
+            }
+            catch
+            {
+            }
+            return false;
         }
 
         /// <summary>
