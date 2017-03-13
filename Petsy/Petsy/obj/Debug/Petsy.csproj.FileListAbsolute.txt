@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\App.xbf
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\MainPage.xbf
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.xr.xml
@@ -32,6 +33,8 @@ C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\ProjectArchitectures.txt
 =======
+=======
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
 C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\App.xbf
 C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\MainPage.xbf
 C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.xr.xml
@@ -64,4 +67,7 @@ C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt
 C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\ProjectArchitectures.txt
+<<<<<<< HEAD
 >>>>>>> Created database with the table Petsy
+=======
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7

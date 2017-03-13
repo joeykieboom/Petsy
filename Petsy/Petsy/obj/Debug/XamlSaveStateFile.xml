@@ -1,9 +1,13 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <LocalAssembly PathName="c:\users\okke\documents\petsy\petsy\petsy\obj\debug\intermediatexaml\petsy.exe" HashGuid="22968fd1-77b4-b335-460b-0a30eae2f027" />
 =======
     <LocalAssembly PathName="c:\users\joey\documents\petsy\petsy\petsy\obj\debug\intermediatexaml\petsy.exe" HashGuid="9914220c-c445-80e6-0040-c0087fd02544" />
 >>>>>>> Created database with the table Petsy
+=======
+    <LocalAssembly PathName="c:\users\joey\documents\petsy\petsy\petsy\obj\debug\intermediatexaml\petsy.exe" HashGuid="9914220c-c445-80e6-0040-c0087fd02544" />
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

@@ -530,7 +530,10 @@ namespace Petsy.Petsy_XamlTypeInfo
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> Created database with the table Petsy
+=======
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7

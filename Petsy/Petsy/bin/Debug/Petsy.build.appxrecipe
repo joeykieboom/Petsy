@@ -2,12 +2,17 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Machine>LAPTOP-1HPHNO7N</Machine>
     <WindowsUser>Okke</WindowsUser>
 =======
     <Machine>DESKTOP-31LOLUP</Machine>
     <WindowsUser>Joey</WindowsUser>
 >>>>>>> Created database with the table Petsy
+=======
+    <Machine>DESKTOP-31LOLUP</Machine>
+    <WindowsUser>Joey</WindowsUser>
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <TargetOsVersion>6.3</TargetOsVersion>
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
@@ -16,25 +21,34 @@
     <PackageIdentityName>ca9cc3ee-5bc1-4f82-842b-eeb36370fa22</PackageIdentityName>
     <PackageIdentityPublisher>CN=Joey</PackageIdentityPublisher>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <IntermediateOutputPath>C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\Debug\</IntermediateOutputPath>
 =======
     <IntermediateOutputPath>C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\</IntermediateOutputPath>
 >>>>>>> Created database with the table Petsy
+=======
+    <IntermediateOutputPath>C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\Debug\</IntermediateOutputPath>
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <AppXManifest Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\AppxManifest.xml">
 =======
     <AppXManifest Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\AppxManifest.xml">
 >>>>>>> Created database with the table Petsy
+=======
+    <AppXManifest Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\AppxManifest.xml">
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.exe">
       <PackagePath>Petsy.exe</PackagePath>
@@ -76,6 +90,8 @@
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
 =======
+=======
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\Petsy.exe">
       <PackagePath>Petsy.exe</PackagePath>
     </AppxPackagedFile>
@@ -114,7 +130,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+<<<<<<< HEAD
 >>>>>>> Created database with the table Petsy
+=======
+>>>>>>> 7310a38299569d22db380e434cf2e8eda17033d7
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
