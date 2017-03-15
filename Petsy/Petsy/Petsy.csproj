@@ -92,7 +92,16 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="data\DBHandler.cs" />
+    <Compile Include="data\models\Diaries.cs" />
     <Compile Include="data\models\Pets.cs" />
+    <Compile Include="data\models\Regels4.cs" />
+    <Compile Include="data\models\SecurityQuestions.cs" />
+    <Compile Include="data\models\Food.cs" />
+    <Compile Include="data\models\Medicine.cs" />
+    <Compile Include="data\models\Regels1.cs" />
+    <Compile Include="data\models\Regels2.cs" />
+    <Compile Include="data\models\Regels3.cs" />
+    <Compile Include="data\models\Tasks.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
