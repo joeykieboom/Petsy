@@ -58,38 +58,13 @@ namespace Petsy
             // this event is handled for you.
         }
 
-        private void main_page_pet_name_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private async void main_page_button_add_Click(object sender, RoutedEventArgs e)
-        {
-            DBHandler db = new DBHandler();
-
-            if (main_page_pet_name.Text != "")
-            {
-                db.addPet(new Pets(main_page_pet_name.Text, 12, "male", 200, ""));
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            DBHandler db = new DBHandler();
-
-            ObservableCollection<Pets> pet = db.getAllPets();
-
-            PetNameTextbox.Text = pet[0].p_Name;
-        }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             DBHandler db = new DBHandler();
-             
-            if (main_page_pet_name.Text != "")
-            {
-                db.addPet(new Pets(main_page_pet_name.Text, 12, "male", 200, ""));
-            }
+
+            db.addPet(new Pets("Joey", 12, "male", 200, ""));
+            
         }
     }
 }

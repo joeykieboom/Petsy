@@ -6,39 +6,49 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="SlateGray">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     
     <ScrollViewer>
-        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
-            <TextBox 
-            Name="main_page_pet_name"
-            HorizontalAlignment="Stretch" TextChanged="main_page_pet_name_TextChanged"/>
-        <Button Name="main_page_button_add" HorizontalAlignment="Stretch" Click="main_page_button_add_Click">Aanmaken</Button>
-        <Button Click="Button_Click">Check if exist</Button>
-            <TextBox Name="PetNameTextbox"></TextBox>
-            <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                    </Style>
-                </ListView.ItemContainerStyle>
-                <ListView.Resources>
-                    <DataTemplate x:Key="petsDataViewModel">
-                        <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Stretch">
-                            <Image Height="75" Width="75" Source="/Image/mensergerjeniet.png"/>
-                            <StackPanel Margin="10, 0, 0, 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                                <TextBlock x:Name="title" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                <TextBlock x:Name="content" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Age, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"  />
-                                <TextBlock x:Name="id" VerticalAlignment="Bottom" Text="{Binding p_Id, Mode=OneTime}" Style="{StaticResource ControlContextualInfoTextBlockStyle}"  />
-                            </StackPanel>
-                        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <Pivot>
+                <PivotItem Name="pivot_home" Header="Home">
+                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.Resources>
+                            <DataTemplate x:Key="petsDataViewModel">
+                                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Stretch">
+                                    <Image Height="75" Width="75" Source="/Image/mensergerjeniet.png"/>
+                                    <StackPanel Margin="10, 0, 0, 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <TextBlock x:Name="title" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                        <TextBlock x:Name="content" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Age, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"  />
+                                        <TextBlock x:Name="id" VerticalAlignment="Bottom" Text="{Binding p_Id, Mode=OneTime}" Style="{StaticResource ControlContextualInfoTextBlockStyle}"  />
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.Resources>
+                        <ListView.ItemTemplate>
+                            <StaticResource ResourceKey="petsDataViewModel"/>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </PivotItem>
+                <PivotItem Name="pivot_agenda" Header="Agenda">
+
+                </PivotItem>
+                <PivotItem Name="pivot_diary" Header="Diary">
+
+                </PivotItem>
+                <Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="43"/>
                     </DataTemplate>
-                </ListView.Resources>
-                <ListView.ItemTemplate>
-                    <StaticResource ResourceKey="petsDataViewModel"/>
-                </ListView.ItemTemplate>
-            </ListView>
+                </Pivot.HeaderTemplate>
+            </Pivot>
+            
         </StackPanel>
 
         
