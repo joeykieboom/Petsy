@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -39,7 +40,8 @@ namespace Petsy
 
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.
-            this.DataContext = pets;
+            history.DataContext = pets;
+
         }
 
         /// <summary>
@@ -58,13 +60,24 @@ namespace Petsy
             // this event is handled for you.
         }
 
-
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             DBHandler db = new DBHandler();
 
             db.addPet(new Pets("Joey", 12, "male", 200, ""));
-            
+            db.addFood(new Food("blabla", "blalbalalb", "kjshadkhasd"));
+        }
+
+        private void ParentButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private async void history_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var clickedItem = (Pets)e.ClickedItem;
+            var id = clickedItem.PetID;
+            int index = pets.IndexOf(clickedItem);
         }
     }
 }

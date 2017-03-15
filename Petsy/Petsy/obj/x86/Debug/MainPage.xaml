@@ -13,7 +13,7 @@
         <StackPanel Orientation="Vertical">
             <Pivot>
                 <PivotItem Name="pivot_home" Header="Home">
-                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
+                    <ListView x:ConnectionId='1' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                              >
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -26,7 +26,7 @@
                                     <StackPanel Margin="10, 0, 0, 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                         <TextBlock x:Name="title" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
                                         <TextBlock x:Name="content" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Age, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"  />
-                                        <TextBlock x:Name="id" VerticalAlignment="Bottom" Text="{Binding p_Id, Mode=OneTime}" Style="{StaticResource ControlContextualInfoTextBlockStyle}"  />
+                                        <TextBlock x:Name="id" VerticalAlignment="Bottom" Text="{Binding PetID, Mode=OneTime}" Style="{StaticResource ControlContextualInfoTextBlockStyle}"  />
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
@@ -56,7 +56,9 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:ConnectionId='1' Icon="Add" Label="Add item"                           />
+            <AppBarButton x:ConnectionId='2' Icon="Add" Label="Add item"                           />
+            <AppBarButton x:ConnectionId='3' Label="Parents"                           >
+            </AppBarButton>
         </CommandBar>
     </Page.BottomAppBar>
 
