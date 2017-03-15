@@ -3,6 +3,7 @@ using Petsy.data.models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -27,19 +28,26 @@ namespace Petsy
     {
 
         ObservableCollection<Pets> pets = new ObservableCollection<Pets>();
+        ObservableCollection<Food> food = new ObservableCollection<Food>();
+        DBHandler db;
 
         public MainPage()
         {
             this.InitializeComponent();
             //Gittest
 
+
+            db = new DBHandler();
+
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             pets = new DBHandler().getAllPets();
+            food = new DBHandler().getAllFood();
 
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.
-            this.DataContext = pets;
+            history.DataContext = pets;
+            test1.DataContext = food;
         }
 
         /// <summary>
@@ -61,9 +69,10 @@ namespace Petsy
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            DBHandler db = new DBHandler();
 
             db.addPet(new Pets("Joey", 12, "male", 200, ""));
+
+            db.addFood(new Food(textbotx.Text, textbotx1.Text, textbotx2.Text));
             
         }
     }
