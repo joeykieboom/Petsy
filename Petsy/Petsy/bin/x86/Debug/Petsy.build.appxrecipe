@@ -52,6 +52,9 @@
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\Image\mensergerjeniet.png">
+      <PackagePath>Image\mensergerjeniet.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\Petsy.xr.xml">
       <PackagePath>Petsy.xr.xml</PackagePath>
     </AppxPackagedFile>
