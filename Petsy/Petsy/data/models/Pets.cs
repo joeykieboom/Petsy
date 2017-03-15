@@ -10,7 +10,7 @@ namespace Petsy.data.models
     {
         //The Id property is marked as the Primary Key  
         [SQLite.PrimaryKey, SQLite.AutoIncrement]
-        public int p_Id { get; set; }
+        public int PetID { get; set; }
         public string p_Name { get; set; }
         public int p_Age { get; set; }
         public string p_Gender { get; set; }
