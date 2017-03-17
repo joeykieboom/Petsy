@@ -1,6 +1,10 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
+<<<<<<< HEAD
     <LocalAssembly PathName="c:\users\joey\documents\petsy\petsy\petsy\obj\x86\debug\intermediatexaml\petsy.exe" HashGuid="5a9f828a-f134-2cb7-192c-997516415642" />
+=======
+    <LocalAssembly PathName="c:\users\okke\documents\petsy\petsy\petsy\obj\x86\debug\intermediatexaml\petsy.exe" HashGuid="964b353f-0dd1-9919-2d39-63885d8402fa" />
+>>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

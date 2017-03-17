@@ -13,7 +13,13 @@
         <StackPanel Orientation="Vertical">
             <Pivot>
                 <PivotItem Name="pivot_home" Header="Home">
+<<<<<<< HEAD
                     <ListView x:ConnectionId='1' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                              >
+=======
+
+
+                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
+>>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -22,7 +28,7 @@
                         <ListView.Resources>
                             <DataTemplate x:Key="petsDataViewModel">
                                 <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Stretch">
-                                    <Image Height="75" Width="75" Source="/Image/mensergerjeniet.png"/>
+                                    <Image Height="75" Width="75" Source="Image/mensergerjeniet.png"/>
                                     <StackPanel Margin="10, 0, 0, 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                         <TextBlock x:Name="title" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
                                         <TextBlock x:Name="content" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Age, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"  />
@@ -37,7 +43,35 @@
                     </ListView>
                 </PivotItem>
                 <PivotItem Name="pivot_agenda" Header="Agenda">
+                    <StackPanel>
+                        <StackPanel>
+                            <TextBox Name="textbotx" HorizontalAlignment="Stretch"></TextBox>
+                            <TextBox Name="textbotx1" HorizontalAlignment="Stretch"></TextBox>
+                            <TextBox Name="textbotx2" HorizontalAlignment="Stretch"></TextBox>
+                        </StackPanel>
 
+                        <ScrollViewer>
+                            <ListView x:ConnectionId='1' x:Name="test1" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch"                                             SelectionMode="None">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.Resources>
+                                    <DataTemplate x:Key="foodDataViewModel">
+                                        <StackPanel>
+                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Amount, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_MiscInfo, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.Resources>
+                                <ListView.ItemTemplate>
+                                    <StaticResource ResourceKey="foodDataViewModel"/>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ScrollViewer>
+                    </StackPanel>
                 </PivotItem>
                 <PivotItem Name="pivot_diary" Header="Diary">
 
@@ -57,8 +91,11 @@
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton x:ConnectionId='2' Icon="Add" Label="Add item"                           />
+<<<<<<< HEAD
             <AppBarButton x:ConnectionId='3' Label="Parents"                           >
             </AppBarButton>
+=======
+>>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
         </CommandBar>
     </Page.BottomAppBar>
 

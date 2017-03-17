@@ -44,6 +44,14 @@ namespace Petsy
                 using (var db = new SQLiteConnection(DB_PATH))
                 {
                     db.CreateTable<Pets>();
+                    db.CreateTable<Food>();
+                    db.CreateTable<Medicine>();
+                    db.CreateTable<Diaries>();
+                    db.CreateTable<Tasks>();
+                    db.CreateTable<Regels1>();
+                    db.CreateTable<Regels2>();
+                    db.CreateTable<Regels3>();
+                    db.CreateTable<Regels4>();
                 }
             }
         }
