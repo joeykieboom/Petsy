@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
+<<<<<<< HEAD
+    <RootPropertyPathName Name="PetID" />
+=======
     <RootPropertyPathName Name="f_MiscInfo" />
     <RootPropertyPathName Name="f_Amount" />
     <RootPropertyPathName Name="f_Name" />
     <RootPropertyPathName Name="p_Id" />
+>>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
     <RootPropertyPathName Name="p_Age" />
     <RootPropertyPathName Name="p_Name" />
   </Roots.PropertyPathNames>
@@ -39,10 +43,18 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="SelectionMode" />
+<<<<<<< HEAD
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemContainerStyle" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="ItemClick" />
+=======
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="Resources" />
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="SelectionChanged" />
+>>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootMethod Name="GetRow" />
