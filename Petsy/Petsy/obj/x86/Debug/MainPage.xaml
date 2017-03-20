@@ -7,19 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
-    
+
+
     <ScrollViewer>
         <StackPanel Orientation="Vertical">
             <Pivot>
                 <PivotItem Name="pivot_home" Header="Home">
-<<<<<<< HEAD
                     <ListView x:ConnectionId='1' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                              >
-=======
-
-
-                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -51,7 +45,7 @@
                         </StackPanel>
 
                         <ScrollViewer>
-                            <ListView x:ConnectionId='1' x:Name="test1" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch"                                             SelectionMode="None">
+                            <ListView x:Name="test1" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -82,24 +76,21 @@
                     </DataTemplate>
                 </Pivot.HeaderTemplate>
             </Pivot>
-            
+
         </StackPanel>
 
-        
+
     </ScrollViewer>
 
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton x:ConnectionId='2' Icon="Add" Label="Add item"                           />
-<<<<<<< HEAD
             <AppBarButton x:ConnectionId='3' Label="Parents"                           >
             </AppBarButton>
-=======
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
         </CommandBar>
     </Page.BottomAppBar>
 
 
-    
+
 </Page>
 

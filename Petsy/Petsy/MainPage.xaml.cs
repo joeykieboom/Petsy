@@ -39,7 +39,6 @@ namespace Petsy
 
 
             db = new DBHandler();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             pets = new DBHandler().getAllPets();
@@ -48,11 +47,7 @@ namespace Petsy
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.
             history.DataContext = pets;
-<<<<<<< HEAD
-
-=======
             test1.DataContext = food;
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
         }
 
         /// <summary>
@@ -75,13 +70,12 @@ namespace Petsy
         {
 
             db.addPet(new Pets("Joey", 12, "male", 200, ""));
-<<<<<<< HEAD
             db.addFood(new Food("blabla", "blalbalalb", "kjshadkhasd"));
         }
 
         private void ParentButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ParentCheck));
         }
 
         private async void history_ItemClick(object sender, ItemClickEventArgs e)
@@ -89,11 +83,9 @@ namespace Petsy
             var clickedItem = (Pets)e.ClickedItem;
             var id = clickedItem.PetID;
             int index = pets.IndexOf(clickedItem);
-=======
 
             db.addFood(new Food(textbotx.Text, textbotx1.Text, textbotx2.Text));
             
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
         }
     }
 }

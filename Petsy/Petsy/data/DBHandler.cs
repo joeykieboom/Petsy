@@ -37,6 +37,7 @@ namespace Petsy.data
                         dbConn.CreateTable<Medicine>();
                         dbConn.CreateTable<Diaries>();
                         dbConn.CreateTable<Tasks>();
+                        dbConn.CreateTable<SecurityQuestions>();
                         dbConn.CreateTable<Regels1>();
                         dbConn.CreateTable<Regels2>();
                         dbConn.CreateTable<Regels3>();
@@ -290,6 +291,7 @@ namespace Petsy.data
                 });
             }
         }
+
 
         //Regels1
         public void addRegel1(Regels1 regel1)

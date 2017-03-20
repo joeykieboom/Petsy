@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Petsy.PetCreate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Petsy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <TextBox Name="petName" HorizontalAlignment="Stretch" PlaceholderText="Huisdier naam"/>
+            <ComboBox Name="petType" HorizontalAlignment="Stretch" PlaceholderText="Soort"/>
+            <TextBox Name="petAge" InputScope ="Number" PlaceholderText="Huisdier leeftijd" />
+            <ComboBox Name="petGender" HorizontalAlignment="Stretch" PlaceholderText="Geslacht"/>
+            <TextBox Name="petWeight" InputScope="Number" PlaceholderText="Huisdier gewicht" />
+            <TextBox Name="petMisc" HorizontalAlignment="Stretch" />
+            <Button x:ConnectionId='1' Name="Create"                     >Create</Button>
+        </StackPanel>
+
+    </Grid>
+</Page>
+

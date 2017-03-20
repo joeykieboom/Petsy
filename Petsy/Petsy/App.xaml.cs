@@ -1,4 +1,5 @@
-﻿using Petsy.data.models;
+﻿using Petsy.data;
+using Petsy.data.models;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -48,10 +49,24 @@ namespace Petsy
                     db.CreateTable<Medicine>();
                     db.CreateTable<Diaries>();
                     db.CreateTable<Tasks>();
+                    db.CreateTable<SecurityQuestions>();
                     db.CreateTable<Regels1>();
                     db.CreateTable<Regels2>();
                     db.CreateTable<Regels3>();
                     db.CreateTable<Regels4>();
+
+                    DBHandler dbh = new DBHandler();
+                    SecurityQuestions[] questions = new SecurityQuestions[5];
+                    questions[0] = new SecurityQuestions("Is Michael Jackson dead?", "true");
+                    questions[1] = new SecurityQuestions("Was New York van de Nederlanders?", "true");
+                    questions[2] = new SecurityQuestions("Is de PvdA gevallen in de afgelopen verkiezingen?", "true");
+                    questions[3] = new SecurityQuestions("De EU is in 1990 onstaan.", "false");
+                    questions[4] = new SecurityQuestions("Is Tom Cruise christelijk?", "false");
+
+                    for (int i = 0; i < questions.Length; i++)
+                    {
+                        dbh.addSecurityQuestions(questions[i]);
+                    }
                 }
             }
         }

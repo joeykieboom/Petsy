@@ -91,6 +91,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParentCheck.xaml.cs">
+      <DependentUpon>ParentCheck.xaml</DependentUpon>
+    </Compile>
     <Compile Include="data\DBHandler.cs" />
     <Compile Include="data\models\Diaries.cs" />
     <Compile Include="data\models\Pets.cs" />
@@ -104,6 +107,9 @@
     <Compile Include="data\models\Tasks.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PetCreate.xaml.cs">
+      <DependentUpon>PetCreate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="data\SQLite.cs" />
@@ -129,9 +135,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ParentCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PetCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
