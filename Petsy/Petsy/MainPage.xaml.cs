@@ -18,6 +18,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
+
 namespace Petsy
 {
     /// <summary>
@@ -37,7 +39,6 @@ namespace Petsy
 
 
             db = new DBHandler();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             pets = new DBHandler().getAllPets();
@@ -74,7 +75,7 @@ namespace Petsy
 
         private void ParentButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ParentCheck));
         }
 
         private async void history_ItemClick(object sender, ItemClickEventArgs e)
@@ -83,7 +84,8 @@ namespace Petsy
             var id = clickedItem.PetID;
             int index = pets.IndexOf(clickedItem);
 
-            Frame.Navigate(typeof(PetPage), id);
+            db.addFood(new Food(textbotx.Text, textbotx1.Text, textbotx2.Text));
+            
         }
     }
 }

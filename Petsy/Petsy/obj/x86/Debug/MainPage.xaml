@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
-    
+
+
     <ScrollViewer>
         <StackPanel Orientation="Vertical">
             <Pivot>
@@ -76,10 +76,10 @@
                     </DataTemplate>
                 </Pivot.HeaderTemplate>
             </Pivot>
-            
+
         </StackPanel>
 
-        
+
     </ScrollViewer>
 
     <Page.BottomAppBar>
@@ -94,6 +94,6 @@
     </Page.BottomAppBar>
 
 
-    
+
 </Page>
 
