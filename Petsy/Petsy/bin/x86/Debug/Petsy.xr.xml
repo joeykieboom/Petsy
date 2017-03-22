@@ -23,6 +23,38 @@
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="InputScope" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="Name" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Name" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Petsy.CreateTask" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
@@ -32,26 +64,12 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Style" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Name" />
-      <RootEvent Name="Click" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Petsy.ParentCheck" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
       <RootProperty Name="Items" />
@@ -89,12 +107,6 @@
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension">
       <RootProperty Name="ResourceKey" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="InputScope" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
@@ -109,11 +121,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Petsy.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="PlaceholderText" />
-    </RootType>
     <RootType FullName="Petsy.PetCreate" />
   </Roots.RootTypes>
 </Roots>

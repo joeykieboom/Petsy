@@ -74,3 +74,8 @@ C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetCreate.g.i.cs
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetCreate.g.cs
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetCreate.xaml
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetCreate.xbf
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\CreateTask.xbf
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\CreateTask.g.i.cs
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\CreateTask.g.cs
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\CreateTask.xaml
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\CreateTask.xbf

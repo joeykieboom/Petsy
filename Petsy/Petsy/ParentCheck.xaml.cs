@@ -80,7 +80,7 @@ namespace Petsy
 
             if (trueAnwser == anwser)
             {
-                Frame.Navigate(typeof(PetCreate));
+                Frame.Navigate(typeof(CreateTask));
             }
             else
             {
@@ -95,7 +95,7 @@ namespace Petsy
 
             if (trueAnwser == anwser)
             {
-                Frame.Navigate(typeof(PetCreate));
+                Frame.Navigate(typeof(CreateTask));
             }
             else
             {

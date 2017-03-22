@@ -64,6 +64,9 @@
     <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\CreateTask.xbf">
+      <PackagePath>CreateTask.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\ParentCheck.xbf">
       <PackagePath>ParentCheck.xbf</PackagePath>
     </AppxPackagedFile>

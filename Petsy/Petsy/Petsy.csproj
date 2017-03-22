@@ -91,6 +91,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateTask.xaml.cs">
+      <DependentUpon>CreateTask.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ParentCheck.xaml.cs">
       <DependentUpon>ParentCheck.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CreateTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ParentCheck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
