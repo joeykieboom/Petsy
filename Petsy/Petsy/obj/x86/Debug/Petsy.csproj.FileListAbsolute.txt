@@ -64,3 +64,8 @@ C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\qualifiers.txt
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.g.i.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.g.cs
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\PetPage.xbf
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.xaml
+C:\Users\Joey\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.xbf

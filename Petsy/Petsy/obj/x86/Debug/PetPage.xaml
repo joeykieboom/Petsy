@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Petsy.PetPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Petsy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" Margin="15">
+
+        <StackPanel Orientation="Horizontal">
+            <Image HorizontalAlignment="Left" Height="150" Width="150" Source="/Image/mensergerjeniet.png">
+
+            </Image>
+            <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <TextBlock Name="petName" Text="NAME" FontSize="20"></TextBlock>
+                <TextBlock Name="petAge" Text="AGE" FontSize="20"></TextBlock>
+                <TextBlock Name="petGender" Text="GENDER" FontSize="20"></TextBlock>
+                <TextBlock Name="petWeight" Text="WEIGHT" FontSize="20"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="10, 10" Orientation="Vertical">
+            <TextBlock Text="Food:" FontSize="32"></TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Page>
+

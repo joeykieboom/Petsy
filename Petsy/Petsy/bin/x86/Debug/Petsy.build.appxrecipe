@@ -58,6 +58,9 @@
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\Image\mensergerjeniet.png">
       <PackagePath>Image\mensergerjeniet.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\Image\Group-WFF.bmp">
+      <PackagePath>Image\Group-WFF.bmp</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\Petsy.xr.xml">
       <PackagePath>Petsy.xr.xml</PackagePath>
     </AppxPackagedFile>
@@ -66,6 +69,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\PetPage.xbf">
+      <PackagePath>PetPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

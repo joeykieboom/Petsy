@@ -1,14 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
-<<<<<<< HEAD
-    <RootPropertyPathName Name="PetID" />
-=======
     <RootPropertyPathName Name="f_MiscInfo" />
     <RootPropertyPathName Name="f_Amount" />
     <RootPropertyPathName Name="f_Name" />
-    <RootPropertyPathName Name="p_Id" />
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
+    <RootPropertyPathName Name="PetID" />
     <RootPropertyPathName Name="p_Age" />
     <RootPropertyPathName Name="p_Name" />
   </Roots.PropertyPathNames>
@@ -42,19 +38,12 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="ItemContainerStyle" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="SelectionMode" />
-<<<<<<< HEAD
       <RootProperty Name="IsItemClickEnabled" />
-      <RootProperty Name="ItemContainerStyle" />
-      <RootProperty Name="Resources" />
-      <RootProperty Name="ItemTemplate" />
       <RootEvent Name="ItemClick" />
-=======
-      <RootProperty Name="ItemContainerStyle" />
-      <RootProperty Name="Resources" />
-      <RootProperty Name="ItemTemplate" />
-      <RootEvent Name="SelectionChanged" />
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootMethod Name="GetRow" />
@@ -83,6 +72,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension">
       <RootProperty Name="ResourceKey" />
@@ -95,6 +85,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Source" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="PrimaryCommands" />
@@ -104,6 +95,12 @@
       <RootProperty Name="Label" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.BitmapIcon">
+      <RootProperty Name="UriSource" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Petsy.MainPage" />
+    <RootType FullName="Petsy.PetPage" />
   </Roots.RootTypes>
 </Roots>

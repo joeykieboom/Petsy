@@ -13,13 +13,7 @@
         <StackPanel Orientation="Vertical">
             <Pivot>
                 <PivotItem Name="pivot_home" Header="Home">
-<<<<<<< HEAD
                     <ListView x:ConnectionId='1' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                              >
-=======
-
-
-                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -51,7 +45,7 @@
                         </StackPanel>
 
                         <ScrollViewer>
-                            <ListView x:ConnectionId='1' x:Name="test1" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch"                                             SelectionMode="None">
+                            <ListView x:Name="test1" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -91,11 +85,11 @@
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton x:ConnectionId='2' Icon="Add" Label="Add item"                           />
-<<<<<<< HEAD
             <AppBarButton x:ConnectionId='3' Label="Parents"                           >
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Image/Group-WF.png" Height="30" Width="30" />
+                </AppBarButton.Icon>
             </AppBarButton>
-=======
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
         </CommandBar>
     </Page.BottomAppBar>
 

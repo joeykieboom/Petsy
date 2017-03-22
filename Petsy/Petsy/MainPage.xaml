@@ -13,13 +13,7 @@
         <StackPanel Orientation="Vertical">
             <Pivot>
                 <PivotItem Name="pivot_home" Header="Home">
-<<<<<<< HEAD
                     <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True" ItemClick="history_ItemClick">
-=======
-
-
-                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -92,6 +86,9 @@
         <CommandBar>
             <AppBarButton Icon="Add" Label="Add item" Click="AppBarButton_Click"/>
             <AppBarButton Label="Parents" Click="ParentButton_Click">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Image/Group-WF.png" Height="30" Width="30" />
+                </AppBarButton.Icon>
             </AppBarButton>
         </CommandBar>
     </Page.BottomAppBar>

@@ -18,8 +18,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
-
 namespace Petsy
 {
     /// <summary>
@@ -48,11 +46,7 @@ namespace Petsy
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.
             history.DataContext = pets;
-<<<<<<< HEAD
-
-=======
             test1.DataContext = food;
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
         }
 
         /// <summary>
@@ -75,7 +69,6 @@ namespace Petsy
         {
 
             db.addPet(new Pets("Joey", 12, "male", 200, ""));
-<<<<<<< HEAD
             db.addFood(new Food("blabla", "blalbalalb", "kjshadkhasd"));
         }
 
@@ -89,11 +82,8 @@ namespace Petsy
             var clickedItem = (Pets)e.ClickedItem;
             var id = clickedItem.PetID;
             int index = pets.IndexOf(clickedItem);
-=======
 
-            db.addFood(new Food(textbotx.Text, textbotx1.Text, textbotx2.Text));
-            
->>>>>>> 71bb774dd9b40a70fa91cde71eca5e556b215c6f
+            Frame.Navigate(typeof(PetPage), id);
         }
     }
 }
