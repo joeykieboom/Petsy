@@ -72,6 +72,7 @@ namespace Petsy
                     petID = pet.PetID;
 
             Regels3 koppel = new Regels3(petID, task.TaskID);
+            dbHandler.addRegel3(koppel);
         }
     }
 }

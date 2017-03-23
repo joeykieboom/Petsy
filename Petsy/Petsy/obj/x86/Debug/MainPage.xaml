@@ -26,7 +26,7 @@
                                     <StackPanel Margin="10, 0, 0, 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                         <TextBlock x:Name="title" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
                                         <TextBlock x:Name="content" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding p_Age, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"  />
-                                        <TextBlock x:Name="id" VerticalAlignment="Bottom" Text="{Binding PetID, Mode=OneTime}" Style="{StaticResource ControlContextualInfoTextBlockStyle}"  />
+                                        <TextBlock x:Name="idOfTask" VerticalAlignment="Bottom" Text="{Binding t_Name, Mode=OneTime}" Style="{StaticResource ControlContextualInfoTextBlockStyle}"  />
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
@@ -68,7 +68,29 @@
                     </StackPanel>
                 </PivotItem>
                 <PivotItem Name="pivot_diary" Header="Diary">
-
+                    <StackPanel>
+                        <ScrollViewer>
+                            <ListView x:Name="test3" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.Resources>
+                                    <DataTemplate x:Key="diaryDataViewModel">
+                                        <StackPanel>
+                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Amount, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_MiscInfo, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.Resources>
+                                <ListView.ItemTemplate>
+                                    <StaticResource ResourceKey="diaryDataViewModel"/>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ScrollViewer>
+                    </StackPanel>
                 </PivotItem>
                 <Pivot.HeaderTemplate>
                     <DataTemplate>

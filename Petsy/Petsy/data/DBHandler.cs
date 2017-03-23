@@ -141,11 +141,11 @@ namespace Petsy.data
         }
 
         //Tasks
-        public Food getTask(int taskID)
+        public Tasks getTask(int taskID)
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingTask = dbConn.Query<Food>("select * from Tasks where TaskID = " + taskID).FirstOrDefault();
+                var existingTask = dbConn.Query<Tasks>("select * from Tasks where TaskID = " + taskID).FirstOrDefault();
                 return existingTask;
             }
         }
@@ -251,6 +251,15 @@ namespace Petsy.data
                         diaryItems.Add(diary);
                     }
                 });
+            }
+        }
+
+        public Regels3 getRegels3(int petID)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                var existingQuestion = dbConn.Query<Regels3>("select * from Regels3 where PetID = " + petID).FirstOrDefault();
+                return existingQuestion;
             }
         }
 

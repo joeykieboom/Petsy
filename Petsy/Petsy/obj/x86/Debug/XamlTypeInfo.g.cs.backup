@@ -124,21 +124,23 @@ namespace Petsy.Petsy_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "Petsy.CreateTask";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "Petsy.ParentCheck";
             _typeNameTable[4] = "Petsy.MainPage";
             _typeNameTable[5] = "Petsy.PetCreate";
+            _typeNameTable[6] = "Petsy.PetPage";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::Petsy.CreateTask);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::Petsy.ParentCheck);
             _typeTable[4] = typeof(global::Petsy.MainPage);
             _typeTable[5] = typeof(global::Petsy.PetCreate);
+            _typeTable[6] = typeof(global::Petsy.PetPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,6 +179,7 @@ namespace Petsy.Petsy_XamlTypeInfo
         private object Activate_3_ParentCheck() { return new global::Petsy.ParentCheck(); }
         private object Activate_4_MainPage() { return new global::Petsy.MainPage(); }
         private object Activate_5_PetCreate() { return new global::Petsy.PetCreate(); }
+        private object Activate_6_PetPage() { return new global::Petsy.PetPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -220,6 +223,13 @@ namespace Petsy.Petsy_XamlTypeInfo
             case 5:   //  Petsy.PetCreate
                 userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_5_PetCreate;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Petsy.PetPage
+                userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_PetPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

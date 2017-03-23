@@ -114,6 +114,9 @@
     <Compile Include="PetCreate.xaml.cs">
       <DependentUpon>PetCreate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PetPage.xaml.cs">
+      <DependentUpon>PetPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="data\SQLite.cs" />
     <Compile Include="data\SQLiteAsync.cs" />
@@ -153,6 +156,10 @@
     <Page Include="PetCreate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PetPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

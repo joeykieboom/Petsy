@@ -27,27 +27,71 @@ namespace Petsy
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
         ObservableCollection<Pets> pets = new ObservableCollection<Pets>();
+        ObservableCollection<PetDataTemplate> petsDataTemplate = new ObservableCollection<PetDataTemplate>();
         ObservableCollection<Food> food = new ObservableCollection<Food>();
+        ObservableCollection<Diaries> diarys = new ObservableCollection<Diaries>();
         DBHandler db;
 
         public MainPage()
         {
             this.InitializeComponent();
-            //Gittest
 
-
-            db = new DBHandler();
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            pets = new DBHandler().getAllPets();
-            food = new DBHandler().getAllFood();
+            db = new DBHandler();
+
+            pets = db.getAllPets();
+            food = db.getAllFood();
+            diarys = db.getAllDiaries();
+
+            foreach (var pet in pets)
+            {
+                PetDataTemplate petItem = new PetDataTemplate();
+                petItem.p_Id = pet.PetID;
+                petItem.p_Name = pet.p_Name;
+                petItem.p_Age = pet.p_Age;
+
+                Regels3 regel3 = db.getRegels3(pet.PetID);
+                if (regel3 != null)
+                {
+                    Tasks task = db.getTask(regel3.TaskID);
+                    petItem.t_Id = task.TaskID;
+                    petItem.t_Name = task.t_Name;
+                }
+
+                petsDataTemplate.Add(petItem);
+            }
+
+            history.DataContext = petsDataTemplate;
+
+            pets.CollectionChanged += Pets_CollectionChanged;
 
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.
-            history.DataContext = pets;
+            history.DataContext = petsDataTemplate;
             test1.DataContext = food;
+            test3.DataContext = diarys;
+        }
+
+        private void Pets_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            ReinstancePetObject();
+        
+        }
+
+        public void ReinstancePetObject()
+        {
+            
+        }
+
+        public class PetDataTemplate
+        {
+            public int p_Id { get; set; }
+            public string p_Name { get; set; }
+            public int p_Age { get; set; }
+            public int t_Id { get; set; }
+            public string t_Name { get; set; }
         }
 
         /// <summary>
@@ -57,13 +101,6 @@ namespace Petsy
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // TODO: Prepare page for display here.
-
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
@@ -78,14 +115,13 @@ namespace Petsy
             Frame.Navigate(typeof(ParentCheck));
         }
 
-        private async void history_ItemClick(object sender, ItemClickEventArgs e)
+        private void history_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clickedItem = (Pets)e.ClickedItem;
-            var id = clickedItem.PetID;
-            int index = pets.IndexOf(clickedItem);
-
-            db.addFood(new Food(textbotx.Text, textbotx1.Text, textbotx2.Text));
+            var clickedItem = (PetDataTemplate)e.ClickedItem;
+            var id = clickedItem.p_Id;
+            int index = petsDataTemplate.IndexOf(clickedItem);
             
+            Frame.Navigate(typeof(PetPage), id);
         }
     }
 }
