@@ -10,7 +10,7 @@
 
     <Grid>
 
-            <TextBlock x:Name="texblock_Question" FontSize="30" HorizontalAlignment="Stretch">
+            <TextBlock x:Name="texblock_Question" FontSize="30" HorizontalAlignment="Stretch" TextWrapping="Wrap">
                 <Run Text="asdasdsadasd"/>
             </TextBlock>
         <Button x:ConnectionId='1' HorizontalAlignment="Right" Content="False" Margin="0,287,0,286"                       />

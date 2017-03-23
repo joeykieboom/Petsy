@@ -158,6 +158,15 @@ namespace Petsy.data
                 return taskItems;
             }
         }
+        public ObservableCollection<Tasks> getAllUnfinishedTasks()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                List<Tasks> myCollection = dbConn.Table<Tasks>().ToList<Tasks>();
+                taskItems = new ObservableCollection<Tasks>(myCollection);
+                return taskItems;
+            }
+        }
         public void addTask(Tasks task)
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
@@ -175,6 +184,13 @@ namespace Petsy.data
                         taskItems.Add(task);
                     }
                 });
+            }
+        }
+        public void updateTask(string column, string value, int id)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.Query<Tasks>("UPDATE Tasks SET " + column + " = " + "'" + value + "'" + " WHERE TaskID = " + id);
             }
         }
 
