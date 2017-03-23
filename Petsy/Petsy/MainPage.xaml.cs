@@ -43,8 +43,25 @@ namespace Petsy
             db = new DBHandler();
             
             pets = db.getAllPets();
-            food = db.getAllFood();
             diarys = db.getAllDiaries();
+            
+
+            // Set the cells to the Page's DataContext. All controls on 
+            // the page will inherit this.
+            history.DataContext = petsDataTemplate;
+            test1.ItemsSource = tasks.Where(task => task.t_Completed == "false");
+            test3.DataContext = diarys;
+        }
+
+        private void Pets_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            ReinstancePetObject();
+        
+        }
+
+        public void ReinstancePetObject()
+        {
+            petsDataTemplate = new ObservableCollection<PetDataTemplate>();
 
             foreach (var pet in pets)
             {
@@ -63,25 +80,6 @@ namespace Petsy
 
                 petsDataTemplate.Add(petItem);
             }
-
-            pets.CollectionChanged += Pets_CollectionChanged;
-
-            // Set the cells to the Page's DataContext. All controls on 
-            // the page will inherit this.
-            history.DataContext = petsDataTemplate;
-            test1.ItemsSource = tasks.Where(task => task.t_Completed == "false");
-            test3.DataContext = diarys;
-        }
-
-        private void Pets_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            ReinstancePetObject();
-        
-        }
-
-        public void ReinstancePetObject()
-        {
-            
         }
 
         public class PetDataTemplate
@@ -130,8 +128,11 @@ namespace Petsy
                 }
             }
 
-            history.DataContext = pets;
+            ReinstancePetObject();
+            history.DataContext = petsDataTemplate;
             test1.ItemsSource = tasks.Where(task => task.t_Completed == "false");
+
+
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
