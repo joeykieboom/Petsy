@@ -3,9 +3,11 @@ using Petsy.data.models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -29,7 +31,7 @@ namespace Petsy
     {
 
         ObservableCollection<Pets> pets = new ObservableCollection<Pets>();
-        ObservableCollection<Food> food = new ObservableCollection<Food>();
+        ObservableCollection<Tasks> tasks = new ObservableCollection<Tasks>();
         DBHandler db;
 
         public MainPage()
@@ -37,17 +39,22 @@ namespace Petsy
             this.InitializeComponent();
             //Gittest
 
-
+            Application.Current.Resuming += Current_Resuming;
             db = new DBHandler();
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             pets = new DBHandler().getAllPets();
-            food = new DBHandler().getAllFood();
+            tasks = new DBHandler().getAllTasks();
+            
 
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.
             history.DataContext = pets;
-            test1.DataContext = food;
+            test1.ItemsSource = tasks.Where(task => task.t_Completed == "false");
+        }
+
+        private void Current_Resuming(object sender, object e)
+        {
         }
 
         /// <summary>
@@ -64,6 +71,33 @@ namespace Petsy
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+
+            pets = new DBHandler().getAllPets();
+            tasks = new DBHandler().getAllTasks();
+
+
+            foreach (var task in tasks)
+            {
+                if(task.t_Name.Length > 30)
+                {
+                    string oldName = task.t_Name;
+                    string newName = oldName.Remove(27);
+                    task.t_Name = newName;
+                    task.t_Name += "...";
+                } 
+                if(task.t_Description.Length > 30)
+                {
+                    string oldDesc = task.t_Description;
+                    string newDesc = oldDesc.Remove(26);
+                    task.t_Description = newDesc;
+                    task.t_Description += "...";
+                }
+            }
+
+            history.DataContext = pets;
+            test1.ItemsSource = tasks.Where(task => task.t_Completed == "false");
+
+
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
@@ -83,9 +117,24 @@ namespace Petsy
             var clickedItem = (Pets)e.ClickedItem;
             var id = clickedItem.PetID;
             int index = pets.IndexOf(clickedItem);
+        }
 
-            db.addFood(new Food(textbotx.Text, textbotx1.Text, textbotx2.Text));
+        private void btn_Complete_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Tasks task = button.DataContext as Tasks;
+            int index = tasks.IndexOf(task);
             
+            string name = task.t_Name;
+            int id = task.TaskID;
+            db.updateTask("t_Completed", "true", id);
+
+            ObservableCollection<Tasks> tasks1 = new DBHandler().getAllTasks();
+
+            
+            Binding binding = new Binding { Source = tasks1.Where(t => t.t_Completed == "false")};
+            BindingOperations.SetBinding(test1, Windows.UI.Xaml.Controls.ListView.ItemsSourceProperty, binding);
+
         }
     }
 }
