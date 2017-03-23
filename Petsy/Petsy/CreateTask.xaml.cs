@@ -62,8 +62,7 @@ namespace Petsy
             DateTime startingDate = new DateTime(taskDate.Date.Year, taskDate.Date.Month, taskDate.Date.Day, taskTime.Time.Hours, taskTime.Time.Minutes, taskTime.Time.Seconds);
             string desc = TaskDesc.Text;
             string interval = taskInterval.SelectedValue.ToString();
-            bool completed = false;
-            Tasks task = new Tasks(name, startingDate, desc, interval, completed);
+            Tasks task = new Tasks(name, startingDate, desc, interval, "false");
             dbHandler.addTask(task);
 
             int petID = 0;

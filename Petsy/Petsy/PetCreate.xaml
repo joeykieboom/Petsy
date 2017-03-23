@@ -17,7 +17,10 @@
             <TextBox Name="petWeight" InputScope="Number" PlaceholderText="Huisdier gewicht" />
             <TextBox Name="petMisc" HorizontalAlignment="Stretch" PlaceholderText="Misc info" />
             <Button Name="Create" Click="Create_Click">Create</Button>
+
         </StackPanel>
+        
+        
 
     </Grid>
 </Page>

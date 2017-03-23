@@ -15,14 +15,14 @@ namespace Petsy.data.models
         public DateTime t_DateTime { get; set; }
         public string t_Description { get; set; }
         public string t_RepeatTime { get; set; }
-        public bool t_Completed { get; set; }
+        public string t_Completed { get; set; }
 
         public Tasks()
         {
             //empty constructor
         }
 
-        public Tasks(string name, DateTime dateTime, string description, string repeatTime, bool completed)
+        public Tasks(string name, DateTime dateTime, string description, string repeatTime, string completed)
         {
             t_Name = name;
             t_DateTime = dateTime;
