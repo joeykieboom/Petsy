@@ -72,6 +72,9 @@ namespace Petsy
 
             Regels3 koppel = new Regels3(petID, task.TaskID);
             dbHandler.addRegel3(koppel);
+
+            Frame.BackStack.RemoveAt(Frame.BackStack.Count - 1);
+            Frame.GoBack();
         }
     }
 }

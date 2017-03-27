@@ -88,7 +88,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(pet);
+                    dbConn.InsertOrReplace(pet);
                     if (petItems != null) 
                     {
                         petItems.Add(pet);
@@ -126,7 +126,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(food);
+                    dbConn.InsertOrReplace(food);
                     if (foodItems != null)
                     {
                         foodItems.Add(food);
@@ -173,7 +173,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(task);
+                    dbConn.InsertOrReplace(task);
                     if (taskItems != null)
                     {
                         taskItems.Add(task);
@@ -218,7 +218,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(medicine);
+                    dbConn.InsertOrReplace(medicine);
                     if (medicineItems != null)
                     {
                         medicineItems.Add(medicine);
@@ -256,7 +256,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(diary);
+                    dbConn.InsertOrReplace(diary);
                     if (diaryItems != null)
                     {
                         diaryItems.Add(diary);
@@ -303,7 +303,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(question);
+                    dbConn.InsertOrReplace(question);
                     if (questionItems != null)
                     {
                         questionItems.Add(question);
@@ -325,7 +325,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(regel1);
+                    dbConn.InsertOrReplace(regel1);
                     if (regel1Items != null)
                     {
                         regel1Items.Add(regel1);
@@ -345,7 +345,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(regel2);
+                    dbConn.InsertOrReplace(regel2);
                     if (regel2Items != null)
                     {
                         regel2Items.Add(regel2);
@@ -365,7 +365,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(regel3);
+                    dbConn.InsertOrReplace(regel3);
                     if (regel3Items != null)
                     {
                         regel3Items.Add(regel3);
@@ -386,7 +386,7 @@ namespace Petsy.data
             {
                 dbConn.RunInTransaction(() =>
                 {
-                    dbConn.Insert(regel4);
+                    dbConn.InsertOrReplace(regel4);
                     if (regel4Items != null)
                     {
                         regel4Items.Add(regel4);
