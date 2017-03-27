@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Petsy.MainPage"
+    x:Class="Petsy.ParentMainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Petsy"
@@ -11,9 +11,9 @@
 
     <ScrollViewer>
         <StackPanel Orientation="Vertical">
-            <Pivot>
+            <Pivot SelectionChanged="Pivot_SelectionChanged" Name="Pivot">
                 <PivotItem Name="pivot_home" Header="Home">
-                    <ListView x:ConnectionId='2' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                              >
+                    <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True" ItemClick="history_ItemClick">
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -49,7 +49,7 @@
                                 <ListView.Resources>
                                     <DataTemplate x:Key="taskDataViewModel">
                                         <Grid>
-                                            <Button x:ConnectionId='1' Name="btn_Complete" HorizontalAlignment="Right"                           >Done</Button>
+                                            <Button Name="btn_Complete" HorizontalAlignment="Right" Click="btn_Complete_Click" >Done</Button>
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Height="75" Width="75" HorizontalAlignment="Left" Source="Image/mensergerjeniet.png"/>
                                                 <StackPanel Orientation="Vertical" Margin="10">
@@ -70,28 +70,10 @@
                         </ScrollViewer>
                     </StackPanel>
                 </PivotItem>
-                <PivotItem Name="pivot_diary" Header="Diary">
+                <PivotItem Name="pivot_options" Header="Options">
                     <StackPanel>
                         <ScrollViewer>
-                            <ListView x:Name="test3" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch">
-                                <ListView.ItemContainerStyle>
-                                    <Style TargetType="ListViewItem">
-                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                                    </Style>
-                                </ListView.ItemContainerStyle>
-                                <ListView.Resources>
-                                    <DataTemplate x:Key="diaryDataViewModel">
-                                        <StackPanel>
-                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Amount, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_MiscInfo, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </ListView.Resources>
-                                <ListView.ItemTemplate>
-                                    <StaticResource ResourceKey="diaryDataViewModel"/>
-                                </ListView.ItemTemplate>
-                            </ListView>
+
                         </ScrollViewer>
                     </StackPanel>
                 </PivotItem>
@@ -109,8 +91,8 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:ConnectionId='3' Icon="Add" Label="Add item"                           />
-            <AppBarButton x:ConnectionId='4' Label="Parents"                           >
+            <AppBarButton Name="AddButton" Icon="Add" Label="Add item" Click="AddButton_Click"/>
+            <AppBarButton Name ="AddButton1" Label="Add pet" HorizontalAlignment="Right">
                 <AppBarButton.Icon>
                     <BitmapIcon UriSource="ms-appx:///Image/Group-WF.png" Height="30" Width="30" />
                 </AppBarButton.Icon>
@@ -121,4 +103,3 @@
 
 
 </Page>
-
