@@ -44,8 +44,7 @@ namespace Petsy
             
             pets = db.getAllPets();
             diarys = db.getAllDiaries();
-            tasks = db.getAllTasks();
-
+            
 
             // Set the cells to the Page's DataContext. All controls on 
             // the page will inherit this.

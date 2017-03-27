@@ -50,15 +50,11 @@
                                     <DataTemplate x:Key="taskDataViewModel">
                                         <Grid>
                                             <Button x:ConnectionId='1' Name="btn_Complete" HorizontalAlignment="Right"                           >Done</Button>
-                                            <StackPanel Orientation="Horizontal">
-                                                <Image Height="75" Width="75" HorizontalAlignment="Left" Source="Image/mensergerjeniet.png"/>
-                                                <StackPanel Orientation="Vertical" Margin="10">
-                                                    <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding t_Name, Mode=OneWay}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                                    <TextBlock x:Name="desc" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding t_Description, Mode=OneWay}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                                    <TextBlock x:Name="dateTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding t_DateTime, Mode=OneWay}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                                </StackPanel>
+                                            <StackPanel>
+                                                <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding t_Name, Mode=OneWay}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                                <TextBlock x:Name="desc" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding t_Description, Mode=OneWay}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                                <TextBlock x:Name="dateTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding t_DateTime, Mode=OneWay}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
                                             </StackPanel>
-
                                             <Rectangle Height="1px" HorizontalAlignment="Stretch"></Rectangle>
                                         </Grid>
                                     </DataTemplate>

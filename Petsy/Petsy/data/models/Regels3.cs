@@ -9,8 +9,7 @@ namespace Petsy.data.models
     class Regels3
     {
         //The Id property is marked as the Primary Key  
-        [SQLite.PrimaryKey, SQLite.AutoIncrement]
-        public int ID { get; set; }
+        [SQLite.PrimaryKey]
         public int PetID { get; set; }
         public int TaskID { get; set; }
 
