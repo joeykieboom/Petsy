@@ -73,6 +73,9 @@
     <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\ParentMainPage.xbf">
+      <PackagePath>ParentMainPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\PetCreate.xbf">
       <PackagePath>PetCreate.xbf</PackagePath>
     </AppxPackagedFile>

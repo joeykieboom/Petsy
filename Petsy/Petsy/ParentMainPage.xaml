@@ -73,7 +73,7 @@
                 <PivotItem Name="pivot_options" Header="Options">
                     <StackPanel>
                         <ScrollViewer>
-                                
+
                         </ScrollViewer>
                     </StackPanel>
                 </PivotItem>
@@ -91,8 +91,8 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Add" Label="Add item" Click="AppBarButton_Click"/>
-            <AppBarButton Name ="AddButton" Label="Add pet" Click="AppBarButton_Click_1" HorizontalAlignment="Right">
+            <AppBarButton Name="AddButton" Icon="Add" Label="Add item" Click="AddButton_Click"/>
+            <AppBarButton Name ="AddButton1" Label="Add pet" HorizontalAlignment="Right">
                 <AppBarButton.Icon>
                     <BitmapIcon UriSource="ms-appx:///Image/Group-WF.png" Height="30" Width="30" />
                 </AppBarButton.Icon>

@@ -104,3 +104,8 @@ C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.g.i.cs
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.g.cs
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.xaml
 C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\PetPage.xbf
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\ParentMainPage.g.i.cs
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\ParentMainPage.g.cs
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\ParentMainPage.xaml
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\obj\x86\Debug\ParentMainPage.xbf
+C:\Users\Okke\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\ParentMainPage.xbf
