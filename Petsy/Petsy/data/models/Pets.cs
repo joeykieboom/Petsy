@@ -16,9 +16,9 @@ namespace Petsy.data.models
         public string p_Gender { get; set; }
         public int p_Weight { get; set; }
         public string p_MiscInfo { get; set; }
-        public byte[] p_Picture { get; set; }
+        public string p_Picture { get; set; }
 
-        //        public int p_FoodId { get; set; }
+        //        public int p_FoodId { get; set; }S
         //        public int p_MedicineId { get; set; }
 
         public Pets()

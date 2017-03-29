@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
@@ -69,6 +70,8 @@ namespace Petsy
                 petItem.p_Id = pet.PetID;
                 petItem.p_Name = pet.p_Name;
                 petItem.p_Age = pet.p_Age;
+                petItem.p_PictureRaw = pet.p_Picture;
+                petItem.p_Picture = new BitmapImage(new Uri(pet.p_Picture, UriKind.Relative));
 
                 Regels3 regel3 = db.getRegels3(pet.PetID);
                 if (regel3 != null)
@@ -89,6 +92,8 @@ namespace Petsy
             public int p_Age { get; set; }
             public int t_Id { get; set; }
             public string t_Name { get; set; }
+            public string p_PictureRaw { get; set; }
+            public BitmapImage p_Picture { get; set; }
         }
 
         /// <summary>
@@ -171,6 +176,11 @@ namespace Petsy
             
             Binding binding = new Binding { Source = tasks1.Where(t => t.t_Completed == "false")};
             BindingOperations.SetBinding(test1, Windows.UI.Xaml.Controls.ListView.ItemsSourceProperty, binding);
+        }
+
+        private void history_ManipulationStarted(object sender, ManipulationStartedRoutedEventArgs e)
+        {
+            
         }
     }
 }

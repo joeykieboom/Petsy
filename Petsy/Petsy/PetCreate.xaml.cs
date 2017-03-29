@@ -16,8 +16,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.Media.Capture;      
+using Windows.Media.Capture;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage.Pickers;
+using Windows.ApplicationModel.Core;
+using Windows.ApplicationModel.Activation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -30,10 +33,14 @@ namespace Petsy
     {
         DBHandler dbHandler;
         Pets pet;
+        CoreApplicationView view;
+        String ImagePath;
         Windows.Media.Capture.MediaCapture captureManager;
         public PetCreate()
         {
             this.InitializeComponent();
+
+            view = CoreApplication.GetCurrentView();
 
             dbHandler = new DBHandler();
 
@@ -90,6 +97,10 @@ namespace Petsy
         {
             DBHandler handler = new DBHandler();
             pet = new Pets(petName.Text, Convert.ToInt32(petAge.Text), (string)petGender.SelectedItem, Convert.ToInt32(petWeight.Text), petMisc.Text);
+            if (ImagePath != string.Empty)
+            {
+                pet.p_Picture = ImagePath;
+            }
             handler.addPet(pet);
 
             Frame.BackStack.RemoveAt(Frame.BackStack.Count - 1);
@@ -97,32 +108,42 @@ namespace Petsy
         }
 
         int count = 0;
-
         private async void Take_Picture_Click(object sender, RoutedEventArgs e)
         {
+            ImagePath = string.Empty;
+            FileOpenPicker filePicker = new FileOpenPicker();
+            filePicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            filePicker.ViewMode = PickerViewMode.Thumbnail;
 
-            if (count == 0)
+            // Filter to include a sample subset of file types
+            filePicker.FileTypeFilter.Clear();
+            filePicker.FileTypeFilter.Add(".bmp");
+            filePicker.FileTypeFilter.Add(".png");
+            filePicker.FileTypeFilter.Add(".jpeg");
+            filePicker.FileTypeFilter.Add(".jpg");
+
+            filePicker.PickSingleFileAndContinue();
+
+            view.Activated += viewActivated;
+        }
+        BitmapImage image;
+        private async void viewActivated(CoreApplicationView sender, IActivatedEventArgs args1)
+        {
+            FileOpenPickerContinuationEventArgs args = args1 as FileOpenPickerContinuationEventArgs;
+
+            if (args != null)
             {
-                captureManager = new MediaCapture();    //Define MediaCapture object  
-                await captureManager.InitializeAsync();   //Start preiving on CaptureElement  
-                await captureManager.StartPreviewAsync();
+                if (args.Files.Count == 0) return;
 
-                count++;
-            }
-            else {
+                view.Activated -= viewActivated;
+                StorageFile storageFile = args.Files[0];
+                var stream = await storageFile.OpenAsync(Windows.Storage.FileAccessMode.Read);
+                var bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+                await bitmapImage.SetSourceAsync(stream);
 
-                //Create JPEG image Encoding format for storing image in JPEG type  
-                ImageEncodingProperties imgFormat = ImageEncodingProperties.CreateJpeg();
-                // create storage file in local app storage  
-                StorageFile file = await ApplicationData.Current.LocalFolder.CreateFileAsync("Photo.jpg", CreationCollisionOption.ReplaceExisting);
-                // take photo and store it on file location.  
-                await captureManager.CapturePhotoToStorageFileAsync(imgFormat, file);
-                //// create storage file in Picture Library  
-                //StorageFile file = await KnownFolders.PicturesLibrary.CreateFileAsync("Photo.jpg",CreationCollisionOption.GenerateUniqueName);  
-                // Get photo as a BitmapImage using storage file path.  
-                BitmapImage bmpImage = new BitmapImage(new Uri(file.Path));
-                // show captured image on Image UIElement.  
-                imagepreview.Source = bmpImage;
+                var decoder = await Windows.Graphics.Imaging.BitmapDecoder.CreateAsync(stream);
+                img.Source = bitmapImage;
+                ImagePath = storageFile.Path;
             }
         }
     }

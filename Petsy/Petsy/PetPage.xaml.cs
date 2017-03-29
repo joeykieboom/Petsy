@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -67,6 +68,7 @@ namespace Petsy
             petAge.Text = Convert.ToString(pet.p_Age);
             petGender.Text = pet.p_Gender;
             petWeight.Text = Convert.ToString(pet.p_Weight);
+            petImage.Source = new BitmapImage(new Uri(pet.p_Picture, UriKind.Relative));
         }
     }
 }

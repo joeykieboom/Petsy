@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel>
-            <Image Name="imagepreview"></Image>
+            <Image x:Name="img" Height="150" Width="150" HorizontalAlignment="Center"/>
             <TextBox Name="petName" HorizontalAlignment="Stretch" PlaceholderText="Huisdier naam"/>
             <ComboBox Name="petType" HorizontalAlignment="Stretch" PlaceholderText="Soort"/>
             <TextBox Name="petAge" InputScope ="Number" PlaceholderText="Huisdier leeftijd" />

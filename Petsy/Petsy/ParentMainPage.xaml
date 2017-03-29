@@ -92,11 +92,6 @@
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton Name="AddButton" Icon="Add" Label="Add item" Click="AddButton_Click"/>
-            <AppBarButton Name ="AddButton1" Label="Add pet" HorizontalAlignment="Right">
-                <AppBarButton.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Image/Group-WF.png" Height="30" Width="30" />
-                </AppBarButton.Icon>
-            </AppBarButton>
         </CommandBar>
     </Page.BottomAppBar>
 
