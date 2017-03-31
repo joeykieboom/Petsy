@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Petsy.DiaryCreate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Petsy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" Margin="10">
+        <ComboBox Name="petCombo" PlaceholderText="Selecteer huisdier" SelectionChanged="pet_SelectionChanged"/>
+        <ComboBox Name="oneLineCombo" PlaceholderText="Selecteer de oneliner" SelectionChanged="oneLineCombo_SelectionChanged"/>
+        <TextBox Name="whereText" PlaceholderText="Waar?"/>
+        <TextBox Name="whenText" PlaceholderText="Wanneer?"/>
+        <TextBox Name="miscInfoText" PlaceholderText="Overige informatie"/>
+    </StackPanel>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Name="AddButton" Icon="Add" Label="Create diary" Click="AddButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

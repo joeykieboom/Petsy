@@ -11,7 +11,7 @@
 
     <ScrollViewer>
         <StackPanel Orientation="Vertical">
-            <Pivot>
+            <Pivot Name="Pivot" SelectionChanged="Pivot_SelectionChanged">
                 <PivotItem Name="pivot_home" Header="Home">
                     <ListView x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True" ItemClick="history_ItemClick" ManipulationStarted="history_ManipulationStarted">
                         <ListView.ItemContainerStyle>
@@ -82,9 +82,9 @@
                                 <ListView.Resources>
                                     <DataTemplate x:Key="diaryDataViewModel">
                                         <StackPanel>
-                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Amount, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_MiscInfo, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding d_OneLiner, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding d_Location, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding d_Time, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListView.Resources>
@@ -109,7 +109,7 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Add" Label="Add item" Click="AppBarButton_Click"/>
+            <AppBarButton Name="AddButton" Icon="Add" Label="Add diary" Click="AddButton_Click"/>
             <AppBarButton Label="Parents" Click="ParentButton_Click">
                 <TextBlock Text="&#xE125;" FontFamily="Segoe UI Symbol" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
             </AppBarButton>

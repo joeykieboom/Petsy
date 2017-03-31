@@ -91,10 +91,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CreateTask.xaml.cs">
+    <Compile Include="controllers\CreateTask.xaml.cs">
       <DependentUpon>CreateTask.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ParentCheck.xaml.cs">
+    <Compile Include="controllers\CreateDiary.xaml.cs">
+      <DependentUpon>CreateDiary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controllers\ParentCheck.xaml.cs">
       <DependentUpon>ParentCheck.xaml</DependentUpon>
     </Compile>
     <Compile Include="data\DBHandler.cs" />
@@ -108,16 +111,16 @@
     <Compile Include="data\models\Regels2.cs" />
     <Compile Include="data\models\Regels3.cs" />
     <Compile Include="data\models\Tasks.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="controllers\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ParentMainPage.xaml.cs">
+    <Compile Include="controllers\ParentMainPage.xaml.cs">
       <DependentUpon>ParentMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PetCreate.xaml.cs">
-      <DependentUpon>PetCreate.xaml</DependentUpon>
+    <Compile Include="controllers\CreatePet.xaml.cs">
+      <DependentUpon>CreatePet.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PetPage.xaml.cs">
+    <Compile Include="controllers\PetPage.xaml.cs">
       <DependentUpon>PetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,27 +147,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CreateTask.xaml">
+    <Page Include="controllers\CreateTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ParentCheck.xaml">
+    <Page Include="controllers\CreateDiary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ParentMainPage.xaml">
+    <Page Include="controllers\ParentCheck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PetCreate.xaml">
+    <Page Include="controllers\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controllers\ParentMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PetPage.xaml">
+    <Page Include="controllers\CreatePet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controllers\PetPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

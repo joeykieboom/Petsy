@@ -36,6 +36,8 @@ namespace Petsy
         ObservableCollection<Tasks> tasks = new ObservableCollection<Tasks>();
         DBHandler db;
 
+        int selectedPivot;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -113,6 +115,7 @@ namespace Petsy
 
             pets = db.getAllPets();
             tasks = db.getAllTasks();
+            diarys = db.getAllDiaries();
 
 
             foreach (var task in tasks)
@@ -136,15 +139,8 @@ namespace Petsy
             ReinstancePetObject();
             history.DataContext = petsDataTemplate;
             test1.ItemsSource = tasks.Where(task => task.t_Completed == "false");
+            test3.ItemsSource = diarys;
 
-
-        }
-
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
-        {
-
-            db.addPet(new Pets("Joey", 12, "male", 200, ""));
-            db.addFood(new Food("blabla", "blalbalalb", "kjshadkhasd"));
         }
 
         private void ParentButton_Click(object sender, RoutedEventArgs e)
@@ -181,6 +177,31 @@ namespace Petsy
         private void history_ManipulationStarted(object sender, ManipulationStartedRoutedEventArgs e)
         {
             
+        }
+
+        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedPivot = Pivot.SelectedIndex;
+
+            switch (selectedPivot)
+            {
+                case 0:
+                    AddButton.Visibility = Visibility.Collapsed;
+                    break;
+                case 1:
+                    AddButton.Visibility = Visibility.Collapsed;
+                    break;
+                case 2:
+                    AddButton.Visibility = Visibility.Visible;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(DiaryCreate));
         }
     }
 }

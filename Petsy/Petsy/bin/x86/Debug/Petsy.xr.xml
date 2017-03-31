@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="f_MiscInfo" />
-    <RootPropertyPathName Name="f_Amount" />
-    <RootPropertyPathName Name="f_Name" />
+    <RootPropertyPathName Name="d_Time" />
+    <RootPropertyPathName Name="d_Location" />
+    <RootPropertyPathName Name="d_OneLiner" />
     <RootPropertyPathName Name="t_DateTime" />
     <RootPropertyPathName Name="t_Description" />
     <RootPropertyPathName Name="t_Name" />
@@ -37,6 +37,7 @@
       <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Name" />
@@ -58,6 +59,17 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Petsy.CreateTask" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Petsy.DiaryCreate" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
@@ -78,9 +90,9 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Name" />
       <RootProperty Name="Items" />
       <RootProperty Name="HeaderTemplate" />
-      <RootProperty Name="Name" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
@@ -129,16 +141,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Source" />
       <RootProperty Name="Name" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="PrimaryCommands" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Name" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Petsy.MainPage" />
     <RootType FullName="Petsy.ParentMainPage" />

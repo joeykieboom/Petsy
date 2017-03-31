@@ -13,18 +13,20 @@ namespace Petsy.data.models
         public int DairyID { get; set; }
         public string d_OneLiner { get; set; }
         public string d_Location { get; set; }
-        public long d_Time { get; set; }
+        public string d_Time { get; set; }
+        public string d_MiscInfo { get; set; }
 
         public Diaries()
         {
             //empty constructor
         }
 
-        public Diaries(string oneLiner, string location, long time)
+        public Diaries(string oneLiner, string location, string time, string d_MiscInfo)
         {
             d_OneLiner = oneLiner;
             d_Location = location;
             d_Time = time;
+            this.d_MiscInfo = d_MiscInfo;
         }
     }
 }

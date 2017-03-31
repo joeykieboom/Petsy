@@ -64,23 +64,26 @@
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\CreateTask.xbf">
-      <PackagePath>CreateTask.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\CreateTask.xbf">
+      <PackagePath>controllers\CreateTask.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\ParentCheck.xbf">
-      <PackagePath>ParentCheck.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\CreateDiary.xbf">
+      <PackagePath>controllers\CreateDiary.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\ParentCheck.xbf">
+      <PackagePath>controllers\ParentCheck.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\ParentMainPage.xbf">
-      <PackagePath>ParentMainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\MainPage.xbf">
+      <PackagePath>controllers\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\PetCreate.xbf">
-      <PackagePath>PetCreate.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\ParentMainPage.xbf">
+      <PackagePath>controllers\ParentMainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\PetPage.xbf">
-      <PackagePath>PetPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\CreatePet.xbf">
+      <PackagePath>controllers\CreatePet.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\controllers\PetPage.xbf">
+      <PackagePath>controllers\PetPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Joey\Documents\Petsy\Petsy\Petsy\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

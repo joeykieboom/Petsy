@@ -124,25 +124,27 @@ namespace Petsy.Petsy_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
+            _typeNameTable = new string[9];
             _typeNameTable[0] = "Petsy.CreateTask";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Petsy.ParentCheck";
-            _typeNameTable[4] = "Petsy.MainPage";
-            _typeNameTable[5] = "Petsy.ParentMainPage";
-            _typeNameTable[6] = "Petsy.PetCreate";
-            _typeNameTable[7] = "Petsy.PetPage";
+            _typeNameTable[3] = "Petsy.DiaryCreate";
+            _typeNameTable[4] = "Petsy.ParentCheck";
+            _typeNameTable[5] = "Petsy.MainPage";
+            _typeNameTable[6] = "Petsy.ParentMainPage";
+            _typeNameTable[7] = "Petsy.PetCreate";
+            _typeNameTable[8] = "Petsy.PetPage";
 
-            _typeTable = new global::System.Type[8];
+            _typeTable = new global::System.Type[9];
             _typeTable[0] = typeof(global::Petsy.CreateTask);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Petsy.ParentCheck);
-            _typeTable[4] = typeof(global::Petsy.MainPage);
-            _typeTable[5] = typeof(global::Petsy.ParentMainPage);
-            _typeTable[6] = typeof(global::Petsy.PetCreate);
-            _typeTable[7] = typeof(global::Petsy.PetPage);
+            _typeTable[3] = typeof(global::Petsy.DiaryCreate);
+            _typeTable[4] = typeof(global::Petsy.ParentCheck);
+            _typeTable[5] = typeof(global::Petsy.MainPage);
+            _typeTable[6] = typeof(global::Petsy.ParentMainPage);
+            _typeTable[7] = typeof(global::Petsy.PetCreate);
+            _typeTable[8] = typeof(global::Petsy.PetPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -178,11 +180,12 @@ namespace Petsy.Petsy_XamlTypeInfo
         }
 
         private object Activate_0_CreateTask() { return new global::Petsy.CreateTask(); }
-        private object Activate_3_ParentCheck() { return new global::Petsy.ParentCheck(); }
-        private object Activate_4_MainPage() { return new global::Petsy.MainPage(); }
-        private object Activate_5_ParentMainPage() { return new global::Petsy.ParentMainPage(); }
-        private object Activate_6_PetCreate() { return new global::Petsy.PetCreate(); }
-        private object Activate_7_PetPage() { return new global::Petsy.PetPage(); }
+        private object Activate_3_DiaryCreate() { return new global::Petsy.DiaryCreate(); }
+        private object Activate_4_ParentCheck() { return new global::Petsy.ParentCheck(); }
+        private object Activate_5_MainPage() { return new global::Petsy.MainPage(); }
+        private object Activate_6_ParentMainPage() { return new global::Petsy.ParentMainPage(); }
+        private object Activate_7_PetCreate() { return new global::Petsy.PetCreate(); }
+        private object Activate_8_PetPage() { return new global::Petsy.PetPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -209,37 +212,44 @@ namespace Petsy.Petsy_XamlTypeInfo
                 xamlType = new global::Petsy.Petsy_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Petsy.ParentCheck
+            case 3:   //  Petsy.DiaryCreate
                 userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_ParentCheck;
+                userType.Activator = Activate_3_DiaryCreate;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Petsy.MainPage
+            case 4:   //  Petsy.ParentCheck
                 userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_4_ParentCheck;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Petsy.ParentMainPage
+            case 5:   //  Petsy.MainPage
                 userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_ParentMainPage;
+                userType.Activator = Activate_5_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Petsy.PetCreate
+            case 6:   //  Petsy.ParentMainPage
                 userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_PetCreate;
+                userType.Activator = Activate_6_ParentMainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Petsy.PetPage
+            case 7:   //  Petsy.PetCreate
                 userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_PetPage;
+                userType.Activator = Activate_7_PetCreate;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Petsy.PetPage
+                userType = new global::Petsy.Petsy_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_PetPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

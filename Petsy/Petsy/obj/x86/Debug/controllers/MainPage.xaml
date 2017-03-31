@@ -11,9 +11,9 @@
 
     <ScrollViewer>
         <StackPanel Orientation="Vertical">
-            <Pivot>
+            <Pivot x:ConnectionId='1' Name="Pivot"                                          >
                 <PivotItem Name="pivot_home" Header="Home">
-                    <ListView x:ConnectionId='2' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                                                                                >
+                    <ListView x:ConnectionId='3' x:Name="history" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" SelectionMode="None" IsItemClickEnabled="True"                                                                                >
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -49,7 +49,7 @@
                                 <ListView.Resources>
                                     <DataTemplate x:Key="taskDataViewModel">
                                         <Grid>
-                                            <Button x:ConnectionId='1' Name="btn_Complete" HorizontalAlignment="Right"                           >Done</Button>
+                                            <Button x:ConnectionId='2' Name="btn_Complete" HorizontalAlignment="Right"                           >Done</Button>
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Height="75" Width="75" HorizontalAlignment="Left" Source="Image/mensergerjeniet.png"/>
                                                 <StackPanel Orientation="Vertical" Margin="10">
@@ -82,9 +82,9 @@
                                 <ListView.Resources>
                                     <DataTemplate x:Key="diaryDataViewModel">
                                         <StackPanel>
-                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Name, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_Amount, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
-                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding f_MiscInfo, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="name" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding d_OneLiner, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="amount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding d_Location, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
+                                            <TextBlock x:Name="miscInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding d_Time, Mode=OneTime}" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListView.Resources>
@@ -109,8 +109,8 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:ConnectionId='3' Icon="Add" Label="Add item"                           />
-            <AppBarButton x:ConnectionId='4' Label="Parents"                           >
+            <AppBarButton x:ConnectionId='4' Name="AddButton" Icon="Add" Label="Add diary"                        />
+            <AppBarButton x:ConnectionId='5' Label="Parents"                           >
                 <TextBlock Text="&#xE125;" FontFamily="Segoe UI Symbol" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
             </AppBarButton>
         </CommandBar>
